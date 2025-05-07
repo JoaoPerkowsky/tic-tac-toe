@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da velha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Jogo da velha</h1>
+  <div class="game-container">
+
+    <div class="placar" id="divPlacar-x">
+      <p>X</p>
+      <div class="placar-vitorias">
+        <h1>Vitórias:</h1>
+        <h2 id="x-placar">0</h2>
+      </div>
+    </div>
+    
+    <div class="board" id="board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+
+    <div class="placar" id="divPlacar-o">
+      <p>O</p>
+      <div class="placar-vitorias">
+        <h1>Vitórias:</h1>
+        <h2  id="o-placar">0</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mensagem" id="mensagem" hidden>
+    <h1 id="mensagem-vencedor"></h1>
+    <h2 id="mensagem-resultado">Venceu!</h2>
+  </div>
+
+  <button class="btn" id="restartBtn">Revanche!</button>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

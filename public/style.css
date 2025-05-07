@@ -1,0 +1,111 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: #f0f0f0;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: center;
+    gap: 5px;
+    margin: 20px;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 2px solid #333;
+    cursor: pointer;
+  }
+  
+  .cell:hover {
+    background: rgb(197, 197, 197);
+  }
+
+  button.btn {
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: rgba(151, 151, 151, 0.452);
+    
+  }
+  
+  .cell.x {
+    color: red;
+    background: rgba(209, 209, 209, 0.65);
+  }
+  .cell.o {
+     color: blue;
+     background: rgba(209, 209, 209, 0.65);
+    }
+  
+  .message {
+    font-size: 1.5rem;
+    margin: 20px;
+  }
+
+  .game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .score {
+    font-size: 1.2rem;
+    width: 100px;
+  }
+
+  .placar {
+    border: solid 2px black;
+    border-radius: 10px;
+    background: white;
+    padding: 5px;
+  }
+
+  div.placar p {
+    margin: 20px 0 0 0;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .placar-vitorias {
+    display: flex;
+    align-items: center;
+  }
+  .placar-vitorias h1, h2 {
+    font-size: 20px;
+  }
+  .placar-vitorias h1 {
+    margin-right: 5px;
+  }
+  
+  .ativo {
+    background-color: rgba(0, 255, 136, 0.048);
+    box-shadow: 0 0 15px #00ff88;
+    transition: all 0.3s ease;
+    animation: pulsar 1.5s infinite ease-in-out;
+  }
+
+  /* Usado para a animação do turno */
+  @keyframes pulsar {
+    0% {
+      box-shadow: 0 0 5px #00ff88;
+    }
+    50% {
+      box-shadow: 0 0 35px #00ff88;
+    }
+    100% {
+      box-shadow: 0 0 5px #00ff88;
+    }
+  }
